@@ -1,0 +1,24 @@
+create database imoveis;
+
+use imoveis;
+
+create table cadastro_imoveis ( 
+id int auto_increment primary key,
+tipo varchar(10),
+cep varchar(10),
+endereco varchar(100),
+cidade varchar(30),
+uf varchar(30),
+liberado varchar(10)
+);
+ 
+select * from cadastro_imoveis;
+
+insert into cadastro_imoveis (id, tipo, cep, endereco, cidade, uf, liberado)
+values (null, 'Casa', '30000-000', 'Rua teste a, 100 - Bairro b', 'Belo Horizonte', 'MG', true); 
+
+delete from cadastro_imoveis where id = 1;
+
+select * from cadastro_imoveis where id = 1;
+
+update cadastro_imoveis set tipo = "Casa", cep = "30000-001", endereco = "Rua teste b, 443 - bairro t", cidade = "Contagem", uf = "RJ", liberado = 2 where id = 1; 
